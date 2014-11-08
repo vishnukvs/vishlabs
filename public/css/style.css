@@ -4,7 +4,8 @@ body{
 }
 .header-background{
 	background-image: url(../images/header_bg.jpg);
-	height: 1001px;
+	margin-top: -30px;
+	height: 600px;
 	z-index: -1;
 }
 .header-background .header-text {

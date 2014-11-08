@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-
+{{ HTML::ul($errors->all(), array('class'=>'errors'))}}
 {{ Form::open()}}
 <p>
 {{ Form::label('Subject')}}
@@ -13,4 +13,5 @@
 <br/><br/>
 {{ Form::submit('Send')}}
 {{ Form::close()}}
+
 @stop
