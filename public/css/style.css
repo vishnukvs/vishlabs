@@ -1,0 +1,12 @@
+body{
+	font-size: 14px;
+	
+}
+.header-background{
+	background-image: url(../images/header_bg.jpg);
+	height: 1001px;
+	z-index: -1;
+}
+.header-background .header-text {
+	color:#fff;
+}
