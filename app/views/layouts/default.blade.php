@@ -31,11 +31,11 @@
 		</header>
 
 		
-			@yield('content')
-	
+		@yield('content')
+		
 		<footer>
 			<div class="col-md-2 navbar-brand">
-			<a href="/">Vishnu Labs</a>
+				<a href="/">Vishnu Labs</a>
 			</div>
 		</footer>
 
