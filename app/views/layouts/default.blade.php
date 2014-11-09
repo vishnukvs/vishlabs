@@ -30,9 +30,9 @@
 			</div><!--/containerfluid-->
 		</header>
 
-		<div class="container">
+		
 			@yield('content')
-		</div>
+	
 		<footer>
 			<div class="col-md-2 navbar-brand">
 			<a href="/">Vishnu Labs</a>
