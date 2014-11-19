@@ -35,7 +35,22 @@ $validator = Validator::make($data, $rules);
 if($validator->fails()) {
 return Redirect::to('contact')->withErrors($validator)->withInput();
 }
+$emailContent = array(
+		'subject'=>$data['subject'],
+		'message'=>$data['message']
+		);
+	Mail::send('emails.contactemail', $emailContent, function($message)
+	{
+		$message->to('vishnu@burbtech.com.au','Learning Laravel Support')
+		->subject('Contact via Our Contact Form');
+	});
 
-return 'Your message has been sent';
-
+	return 'Your Message has been Sent successfully';
 });
+
+Route::get('contact',function(){
+	return View::make('contact');
+});
+
+
+	
