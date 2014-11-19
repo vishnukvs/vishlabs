@@ -12,7 +12,7 @@
 	<div class="form-group">
 		{{ Form::label('Message',null,array('class'=>'col-sm-2 control-label'))}}
 		<div class="col-md-5">
-			{{ Form::textarea('message',null,array('class'=>'form-control'))}}
+			{{ Form::textarea('messages',null,array('class'=>'form-control'))}}
 		</div>
 	</div>
 	<div class="form-group">

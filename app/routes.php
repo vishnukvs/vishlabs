@@ -27,7 +27,7 @@ Route::post('contact', function()
 $data = Input::all();
 $rules = array(
 'subject' => 'required',
-'message' => 'required'
+'messages' => 'required'
 );
 
 $validator = Validator::make($data, $rules);
@@ -37,7 +37,7 @@ return Redirect::to('contact')->withErrors($validator)->withInput();
 }
 $emailContent = array(
 		'subject'=>$data['subject'],
-		'message'=>$data['message']
+		'messages'=>$data['messages']
 		);
 	Mail::send('emails.contactemail', $emailContent, function($message)
 	{

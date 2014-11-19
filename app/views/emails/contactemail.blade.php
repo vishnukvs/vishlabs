@@ -13,6 +13,6 @@
 	<div>
 	
   <div> Email: {{ $subject }} </div>
-  <div> Message: {{ $message }} </div>
+  <div> Message: {{ $messages }} </div>
 </body>
 </html>
