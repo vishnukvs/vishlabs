@@ -36,7 +36,7 @@ if($validator->fails()) {
 return Redirect::to('contact')->withErrors($validator)->withInput();
 }
 $emailContent = array(
-		'eamil'=>$data['email'],
+		'email'=>$data['email'],
 		'messages'=>$data['messages']
 		);
 	Mail::send('emails.contactemail', $emailContent, function($message)
@@ -45,7 +45,9 @@ $emailContent = array(
 		->subject('Contact via Our Contact Form');
 	});
 
-	return 'Your Message has been Sent successfully';
+	
+return Redirect::to('/contact')->with('success', true)->with('message','Your message has been sent. Thank You!');
+
 });
 
 Route::get('contact',function(){

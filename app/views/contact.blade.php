@@ -2,6 +2,12 @@
 @section('content')
 <div class="container"> 
 	{{ HTML::ul($errors->all(), array('class'=>'errors'))}}
+	@if(Session::has('success'))
+	<div class="alert alert-success">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		<strong>Success!</strong> {{ Session::get('message', '') }}
+	</div>
+	@endif
 	{{ Form::open(array('class'=>'form-horizontal'))}}
 	<div class="form-group">
 		{{ Form::label('Email',null,array('class'=>'col-sm-2 control-label'))}}
@@ -21,5 +27,7 @@
 		</div>
 	</div>
 	{{ Form::close()}}
+
+
 	@stop
 </div><!--/end of container-->
