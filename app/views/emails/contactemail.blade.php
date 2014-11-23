@@ -12,7 +12,7 @@
 	</div>
 	<div>
 	
-  <div> Email: {{ $subject }} </div>
+  <div> Email: {{ $email }} </div>
   <div> Message: {{ $messages }} </div>
 </body>
 </html>
